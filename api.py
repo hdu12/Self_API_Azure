@@ -39,14 +39,13 @@ subscription_id=os.environ.get('sub')
 AZURE_CLIENT_ID=os.environ.get('client')
 AZURE_TENANT_ID=os.environ.get('tenant')
 AZURE_CLIENT_SECRET=os.environ.get('secret')
-
+auth=os.environ.get('auth')
 credential = ClientSecretCredential(AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET)
 compute_client = ComputeManagementClient(credential, subscription_id)
 
 app = Flask(__name__)
 app.logger.addHandler(file_handler)
 
-auth = '/Love16by'
 #POST区
 @app.route(auth+'/startvm', methods=['POST'])
 def process_start_post_request():
