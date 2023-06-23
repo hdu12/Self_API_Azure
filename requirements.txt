@@ -1,0 +1,9 @@
+azure-mgmt-compute
+azure-identity
+azure-mgmt-storage
+azure-mgmt-resource
+azure-mgmt-network
+Flask
+gevent
+python-dotenv
+wakeonlan
